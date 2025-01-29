@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-rgb: 214, 219, 220;
+  --foreground-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  background: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb));
+}
+
+.color_back {
+  background-color: #ffe9df;
+}
+
+.color_text {
+  color: #14151c;
+}
+
+.title {
+  font-family: "Bungee", sans-serif;
+  font-size: 2.0625em;
+  color: #14151c;
+}
+
+@font-face {
+  font-family: "Bungee";
+  src: url("/fonts/Bungee-Regular.ttf") format("truetype-variations");
+  /* variable fonts support this: two values specifies a range */
+  font-weight: 300 700;
+  font-style: normal;
+}
