@@ -4,7 +4,7 @@ export default function Nav() {
   const [isOpen, setIsOpen] = createSignal(false); // Gestione dello stato del menu
 
   return (
-    <nav class="navbar color_back relative">
+    <nav class="navbar color_back sticky top-0 z-50 backdrop-blur-lg">
       {/* Logo */}
       <div class="flex-1 ml-10">
         <a href="/" class="title">
