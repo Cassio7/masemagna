@@ -5,8 +5,16 @@ export default function Nav() {
 
   return (
     <nav class="navbar color_back sticky top-0 z-50 backdrop-blur-lg">
-      {/* Logo */}
-      <div class="flex-1 ml-10">
+      <div class="ml-10">
+        <img
+          class="img-flip"
+          src="assets/img/pig.png"
+          alt="logo"
+          width="40"
+          height="40"
+        />
+      </div>
+      <div class="flex-1 ml-4">
         <a href="/" class="title">
           MaseMagna
         </a>
