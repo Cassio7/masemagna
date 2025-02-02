@@ -30,12 +30,30 @@ body {
   font-size: 60px;
   color: #ff7300;
 }
+.title-main {
+  font-family: "BungeeShade", sans-serif;
+  color: #ff7300;
+}
 
 .normal {
   font-family: "ArvoRegular", sans-serif;
   font-size: 17px;
   color: #14151c;
+  font-weight: bold;
 }
+
+.normal_sottotitolo {
+  font-family: "ArvoBold", sans-serif;
+  font-size: 60px;
+  color: #ff7300;
+}
+
+.normal_sottomain {
+  font-family: "ArvoBold", sans-serif;
+  font-size: 22px;
+  color: #14151c;
+}
+
 .normal-footer {
   font-family: "ArvoRegular", sans-serif;
   font-size: 11px;
@@ -50,8 +68,22 @@ body {
   font-style: normal;
 }
 @font-face {
+  font-family: "BungeeShade";
+  src: url("/fonts/BungeeShade-Regular.ttf") format("truetype-variations");
+  /* variable fonts support this: two values specifies a range */
+  font-weight: 300 700;
+  font-style: normal;
+}
+@font-face {
   font-family: "ArvoRegular";
   src: url("/fonts/arvo/Arvo-Regular.ttf") format("truetype-variations");
+  /* variable fonts support this: two values specifies a range */
+  font-weight: 300 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ArvoBold";
+  src: url("/fonts/arvo/Arvo-Bold.ttf") format("truetype-variations");
   /* variable fonts support this: two values specifies a range */
   font-weight: 300 700;
   font-style: normal;
