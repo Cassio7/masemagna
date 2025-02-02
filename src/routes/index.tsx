@@ -1,25 +1,31 @@
-import { A } from "@solidjs/router";
-import Counter from "~/components/Counter";
-
 export default function Home() {
   return (
-    <main class="text-center mx-auto text-gray-700 p-4">
-      <h1 class="max-6-xs text-6xl text-sky-700 font-thin uppercase my-16">Hello world!</h1>
-      <Counter />
-      <p class="mt-8">
-        Visit{" "}
-        <a href="https://solidjs.com" target="_blank" class="text-sky-600 hover:underline">
-          solidjs.com
-        </a>{" "}
-        to learn how to build Solid apps.
-      </p>
-      <p class="my-4">
-        <span>Home</span>
-        {" - "}
-        <A href="/about" class="text-sky-600 hover:underline">
-          About Page
-        </A>{" "}
-      </p>
+    <main class="text-center mx-auto">
+      <div class="color_back">
+        <div class="flex flex-col">
+          <div>
+            <h1 class="normal_sottotitolo pt-16">
+              Quando non sai dove andà, <br /> cerca al...
+            </h1>
+          </div>
+          <div>
+            <h1 class="title-main mt-28" style={{ "font-size": "13vw" }}>
+              Masemagna
+            </h1>
+          </div>
+          <div>
+            <h1 class="normal_sottomain mt-14">
+              Fidati di noi per trovare sempre la qualità e il risparmio <br />i
+              soldi en pochi e i tribbli en tanti
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row justify-center">
+        <div>card</div>
+        <div>card</div>
+        <div>card</div>
+      </div>
     </main>
   );
 }
