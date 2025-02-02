@@ -11,7 +11,10 @@ body {
   background: rgb(var(--background-rgb));
   color: rgb(var(--foreground-rgb));
 }
-
+.img-flip {
+  /* flip horizontally */
+  transform: scaleX(-1);
+}
 .color_back {
   background-color: #ffe9df;
 }
@@ -25,11 +28,13 @@ body {
   font-size: 33px;
   color: #14151c;
 }
+
 .title-footer {
   font-family: "Bungee", sans-serif;
   font-size: 60px;
   color: #ff7300;
 }
+
 .title-main {
   font-family: "BungeeShade", sans-serif;
   color: #ff7300;
@@ -50,7 +55,7 @@ body {
 
 .normal_sottomain {
   font-family: "ArvoBold", sans-serif;
-  font-size: 22px;
+  font-size: 15px;
   color: #14151c;
 }
 
