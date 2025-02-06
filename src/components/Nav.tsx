@@ -8,7 +8,7 @@ export default function Nav() {
       <div class="ml-10">
         <img
           class="img-flip"
-          src="assets/img/pig.png"
+          src="assets/icons/pig.png"
           alt="logo"
           width="40"
           height="40"
@@ -46,7 +46,7 @@ export default function Nav() {
 
       {/* Link per schermi grandi */}
       <div class="hidden lg:flex flex-none mr-10">
-        <a class="normal mr-5" href="/explore">
+        <a class="normal mr-5" href="/esplora">
           Esplora
         </a>
         <a class="normal" href="/about">
@@ -59,7 +59,7 @@ export default function Nav() {
         <div class="absolute top-full left-0 w-full bg-[#ffe9df] shadow-lg lg:hidden">
           <ul class="menu menu-vertical p-4">
             <li class="mb-2">
-              <a class="normal" href="/explore">
+              <a class="normal" href="/esplora">
                 Esplora
               </a>
             </li>

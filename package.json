@@ -9,10 +9,14 @@
   "dependencies": {
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "^1.0.11",
+    "leaflet": "^1.9.4",
     "solid-js": "^1.9.2",
+    "solid-leaflet": "^0.0.1",
+    "solidjs-leaflet": "^1.0.2",
     "vinxi": "^0.4.3"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.16",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.12.23",
     "postcss": "^8.4.38",

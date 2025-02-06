@@ -1,12 +1,15 @@
 export default function Footer() {
   return (
-    <footer class="footer footer-center color_back text-base-content rounded p-10">
+    <footer class="footer footer-center color_back text-base-content p-10">
       <nav class="grid grid-flow-col gap-6">
-        <a class="normal" href="/explore">
+        <a class="normal" href="/esplora">
           Esplora
         </a>
         <a class="normal" href="/about">
           Contatti
+        </a>
+        <a class="normal" href="/terms">
+          Privacy
         </a>
         <a class="normal" href="/terms">
           Termini e condizioni

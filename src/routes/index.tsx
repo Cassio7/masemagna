@@ -6,20 +6,20 @@ export default function Home() {
       <div class="color_back">
         <div class="flex flex-col">
           <div>
-            <h1 class="normal_sottotitolo pt-16">
+            <h1 class="normal_sottotitolo pt-16" >
               Quando non sai dove andà, <br /> cerca al...
             </h1>
           </div>
           <div>
-            <h1 class="title-main mt-28" style={{ "font-size": "13vw" }}>
-              <div class="-mb-40">
+            <h1 class="title-main mt-26" style={{ "font-size": "13vw" }}>
+              {/* <div class="-mb-40">
                 <img
                   class="img-flip"
-                  src="assets/img/pig.png"
+                  src="assets/icons/pig.png"
                   alt="logo"
                   style={{ height: "11vw", width: "11vw" }}
                 />
-              </div>
+              </div> */}
               Masemagna
             </h1>
           </div>
@@ -35,7 +35,7 @@ export default function Home() {
         <div>
           <Card
             title="semplicita"
-            image="assets/img/ramen.png"
+            image="assets/icons/ramen.png"
             img_alt="ramen"
             description="dededed"
           />
@@ -43,7 +43,7 @@ export default function Home() {
         <div>
           <Card
             title="Cibo Etnico"
-            image="assets/img/ramen.png"
+            image="assets/icons/ramen.png"
             img_alt="ramen"
             description="Amo tantissimo il cibo etnico"
           />
@@ -51,7 +51,7 @@ export default function Home() {
         <div>
           <Card
             title="TESTO"
-            image="assets/img/ramen.png"
+            image="assets/icons/ramen.png"
             img_alt="ramen"
             description="dededed"
           />
