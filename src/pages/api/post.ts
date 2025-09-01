@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { supabase } from "@/lib/supabase";
+export const prerender = false;
 
 export const GET: APIRoute = async () => {
   const { data, error } = await supabase.from("post").select("*, author(*),category(*),rating(*)").order("created_at", { ascending: false }).limit(5);

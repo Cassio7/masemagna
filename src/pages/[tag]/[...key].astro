@@ -1,0 +1,12 @@
+---
+import type { Post } from "@/lib/interfaces/post.interface";
+export const prerender = false;
+
+const { tag, key } = Astro.params;
+
+const apiUrl = new URL(`/api/post/${key}`, Astro.url).toString();
+const res = await fetch(apiUrl);
+const post: Post = await res.json();
+---
+
+<h1>{tag} - {key} : {post.name}</h1>
