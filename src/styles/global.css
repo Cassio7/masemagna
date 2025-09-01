@@ -1,6 +1,28 @@
 @import "tailwindcss";
 
-html{
-    @apply scroll-smooth;
-    font-family: Arvo;
+@theme {
+  --color-primary: #14151c;
+  --color-myred: #c1121f;
+}
+
+html {
+  @apply scroll-smooth text-primary;
+  font-family: Arvo;
+}
+body {
+  @apply max-w-[1300px] mx-auto;
+}
+.title {
+  @apply text-3xl md:text-8xl inline-block;
+  font-family: Ultra;
+}
+
+.navbar {
+  @apply pt-15 mb-10;
+}
+h1 {
+  @apply text-4xl;
+}
+h2 {
+  @apply text-2xl;
 }

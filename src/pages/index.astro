@@ -1,14 +1,12 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import type { Post } from "@/lib/interfaces/post.interface";
-
-const apiUrl = new URL("/api/post", Astro.url).toString();
-const res = await fetch(apiUrl);
-const posts: Post[] = await res.json();
+import Layout from "@/layouts/layout.astro";
+import Navbar from "@/components/navbar.astro";
+import Hero from "@/components/hero.astro";
 ---
 
-<Layout>
-  <ul>
-    {posts.map((p) => <li>{p.name}</li>)}
-  </ul>
+<Layout title="Masemagna">
+  <main aria-label="Main content">
+    <Navbar />
+    <Hero />
+  </main>
 </Layout>
