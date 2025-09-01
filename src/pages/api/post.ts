@@ -2,7 +2,7 @@ import type { APIRoute } from "astro";
 import { supabase } from "@/lib/supabase";
 
 export const GET: APIRoute = async () => {
-  const { data, error } = await supabase.from("post").select("*, author(*),category(*),rating(*)").order("created_at", { ascending: false });
+  const { data, error } = await supabase.from("post").select("*, author(*),category(*),rating(*)").order("created_at", { ascending: false }).limit(5);
   if (error) return new Response(JSON.stringify({ error }), { status: 500 });
   return new Response(JSON.stringify(data), { status: 200 });
 };
