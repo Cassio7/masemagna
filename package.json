@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/arvo": "^5.2.6",
+    "@fontsource/ultra": "^5.2.6",
     "@supabase/supabase-js": "^2.56.0",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.4",
