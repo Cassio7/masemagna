@@ -1,7 +1,7 @@
 ---
 import { SITE } from "@/lib/config";
 import "@/styles/global.css";
-import '@fontsource/arvo';
+import "@fontsource/arvo";
 import "@fontsource/ultra";
 
 import { ClientRouter } from "astro:transitions";
@@ -65,8 +65,9 @@ const structuredData = {
 
     <!-- Google JSON-LD Structured data -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
+
   </head>
-  <body class="relative min-h-screen overflow-x-hidden">
+  <body class="relative min-h-screen overflow-x-hidden max-w-[1300px] mx-auto">
     <slot />
   </body>
 </html>

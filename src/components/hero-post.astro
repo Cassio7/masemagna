@@ -10,7 +10,7 @@ interface Props {
 const { post, imgShow } = Astro.props;
 ---
 
-<a href={`/${post.category.name}/${post.key}`}>
+<a href={`post/${post.category.name}/${post.key}`}>
   <div class="flex flex-col gap-4">
     <div>
       {imgShow ? <h1>{post.name}</h1> : <h2>{post.name}</h2>}
