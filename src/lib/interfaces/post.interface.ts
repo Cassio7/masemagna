@@ -6,6 +6,7 @@ import type { Rating } from "./rating.interface";
 export interface Post extends Base {
   name: string;
   description: string;
+  content: string;
   author: Author;
   category: Category;
   rating: Rating[];

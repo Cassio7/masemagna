@@ -1,0 +1,41 @@
+---
+import Navbar from "@/components/navbar.astro";
+import Layout from "@/layouts/Layout.astro";
+import type { Post } from "@/lib/interfaces/post.interface";
+import { slugify } from "@/lib/utils"; // funzione helper per generare lo slug
+import { marked } from "marked";
+
+export const prerender = false;
+
+const { tag, id, slug } = Astro.params;
+
+const apiUrl = new URL(`/api/post/${id}`, Astro.url).toString();
+const res = await fetch(apiUrl);
+const post: Post = await res.json();
+
+// Slug corretto generato dal titolo
+const correctSlug = slugify(post.name);
+
+// Se lo slug nell’URL non è uguale a quello corretto → redirect
+if (slug !== correctSlug || tag !== post.category.name) {
+  return Astro.redirect(`/post/${post.category.name}/${post.id}/${correctSlug}`);
+}
+
+const contentHtml = post?.content ? marked(post.content) : null;
+---
+
+<Layout title={post.name}>
+  <Navbar />
+  <main>
+    <h2>{post.category.name}</h2>
+    <h1>{post.name}</h1>
+    <p>{post.description}</p>
+    {
+      contentHtml ? (
+        <article class="markdown-content" set:html={contentHtml} />
+      ) : (
+        <p class="no-content">Contenuto non disponibile</p>
+      )
+    }
+  </main>
+</Layout>
