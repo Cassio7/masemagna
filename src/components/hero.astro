@@ -7,27 +7,26 @@ const res = await fetch(apiUrl);
 const posts: Post[] = await res.json();
 ---
 
-<div class="grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-7 gap-4">
-  <!-- Primo post -->
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-3 lg:gap-2 items-start">
+  <!-- Post principale (centrato ma largo) -->
   {
     posts[0] && (
-      <div class="lg:col-span-4 lg:row-span-7 px-4 border-dashed border-l-4 border-myred">
+      <div class="lg:col-span-3 lg:col-start-1 lg:row-span-7 px-4 mx-auto w-full max-w-6xl">
         <HeroPost post={posts[0]} imgShow={true} />
       </div>
     )
   }
 
-  <!-- Box -->
-  <div class="lg:col-start-5 lg:row-start-1 p-4">
-    <h1>Ultimi post</h1>
-  </div>
+  <!-- Sidebar -->
+  <div class="lg:col-span-2 lg:col-start-4 lg:row-start-1 space-y-3">
+    <h1 class="text-lg font-semibold mb-2 px-2">Ultimi post</h1>
 
-  <!-- I successivi 3 in colonna -->
-  {
-    posts.slice(1, 5).map((post, i) => (
-      <div class="lg:row-span-2 lg:col-start-5 p-4" style={`grid-row-start: ${2 + i * 2}`}>
-        <HeroPost post={post} imgShow={false} />
-      </div>
-    ))
-  }
+    {
+      posts.slice(1, 5).map((post, i) => (
+        <div class="p-2">
+          <HeroPost post={post} imgShow={false} />
+        </div>
+      ))
+    }
+  </div>
 </div>

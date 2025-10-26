@@ -16,7 +16,7 @@ const slug = slugify(post.name);
 <a href={`post/${post.category.name}/${post.id}/${slug}`}>
   <div class="flex flex-col gap-4">
     <div>
-      {imgShow ? <h1>{post.name}</h1> : <h2>{post.name}</h2>}
+      <h2>{post.name}</h2>
     </div>
     {
       imgShow && (
@@ -26,13 +26,10 @@ const slug = slugify(post.name);
       )
     }
     <div>
-      <p>{post.description}</p>
-    </div>
-    <div>
       <p>{post.category.name}</p>
     </div>
     <div>
-      <p>{post.author.name}</p>
+      <p>Autore: {post.author.name.toLocaleUpperCase()}</p>
     </div>
   </div>
 </a>
